@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  Comprehensive Notes on HTML Tables
+1. What an HTML Table Is
+n HTML table is used to display data in a grid format made up of rows and columns. Tables are useful for organizing information such as schedules, marks, price lists, or structured layouts.
+A table is created using the <table> tag and is built row by row.
+2. Basic Table Structure
+An HTML table consists of:
+<table> → Defines the table container
+<tr> (table row) → Defines a horizontal row
+<td> (table data) → Defines a regular cell (column)
+<th> (table header) → Defines a header cell (bold and centered by default)
+👉 Important Rule:
+Cells (td or th) must always be inside a row (tr).
+3. Rows and Columns Explained
+Rows (<tr>) run horizontally
+Columns (<td> or <th>) run vertically
+Each row can contain one or more cells.
+The number of columns in a row is determined by how many <td> or <th> elements it has, including merged cells.
+4. Making the Table Visible
+By default, HTML tables do not show borders.
+To make the table visible:
+Use the border attribute inside the <table> tag
+Example: border="1"
+This draws lines around cells so you can see the table structure clearly.
+5. Table Size
+You can control the table size using:
+width → Horizontal size
+height → Vertical size
+These can be set in pixels (px) or percentages (%).
+Example:
+width="800px"
+height="600px"
+6. Merging Cells
+HTML allows cells to be merged vertically or horizontally.
+a. Colspan (Horizontal Merge)
+colspan merges cells across columns
+It extends a cell left to right
+Used when one cell should occupy multiple columns
+Example meaning:
+colspan="2" → The cell takes the space of two columns
+b. Rowspan (Vertical Merge)
+rowspan merges cells across rows
+It extends a cell top to bottom
+Used when one cell should occupy multiple rows
+Example meaning:
+rowspan="3" → The cell spans three rows vertically
+Key Rule When Merging
+When a cell spans rows or columns:
+You must remove or reduce cells in the affected rows or columns
+Otherwise, the table layout will break or become uneven
+7. Understanding the Example Table Layout
+In your table:
+Some cells span multiple columns using colspan
+Some cells span multiple rows using rowspan
+The structure is carefully balanced so each row aligns correctly
+Rows with fewer <td> elements rely on earlier rowspan or colspan values
+This is why some rows look shorter in code but still align visually.
+8. Styling Table Cells
+Cells can be styled directly using attributes such as:
+style
+background-color
+Example uses:
+Highlighting important cells
+Visually separating sections
+Improving readability
+Each cell can have a different color or style.
+9. Table Headers (<th>)
+<th> is used for headings
+Text appears bold and centered
+Helps identify columns or sections
+Use <th> when a cell represents a title or label, not normal data.
+10. Best Practices for Tables
+Always plan your table layout before coding
+Decide where merges (rowspan, colspan) are needed
+Keep rows balanced so the table renders correctly
+Use colors sparingly for clarity
+Prefer <th> for headings and <td> for data
+11. Quick Memory Summary
+<table> → container
+<tr> → row (horizontal)
+<td> → data cell (column)
+<th> → header cell
+border → makes table visible
+colspan → horizontal merge
+rowspan → vertical merge -->
+    <table border="1" width="800px" height="600px">
+        <!-- Row 1 -->
+        <tr>
+            <td colspan="2" style="background-color: brown;"></td>
+            <th></th>
+            <td rowspan="2"></td>
+            <td></td>
+        </tr>
+        <!-- Row 2 -->
+         <tr>
+            <td></td>
+            <td colspan="2" style="background-color: blue;"></td>
+            <td></td>
+         </tr>
+         <!-- Row 3 -->
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="2" rowspan="3"></td>
+          </tr>
+          <!-- Row 4 -->
+           <tr>
+            <td rowspan="2"></td>
+            <td colspan="2" rowspan="2" style="background-color: blueviolet;"></td>
+           </tr>
+           <!-- Row 5 -->
+        <tr>
+        </tr>
+        <!-- Row 6 -->
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+    </table>
+</body>
+</html>
